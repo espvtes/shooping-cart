@@ -55,7 +55,8 @@ class App extends Component {
         <button
           style={style}
           onClick={this.togglePersonsHandler}>Switch Name</button>
-          { this.state.showPersons ?
+          { 
+          this.state.showPersons ?
           <div>
             <Person
             name={this.state.persons[0].name}
@@ -68,8 +69,8 @@ class App extends Component {
             <Person
             name={this.state.persons[2].name}
             age={this.state.persons[2].age} />
-          </div>}
-
+          </div>:null
+            }
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
